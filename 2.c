@@ -62,6 +62,7 @@ int main()
      - res: la suma del num1 y num2.
    Valor de retorno: solo imprime los numeros.
 */
+
 void calcularFibonacci(int num)
 {
     int num1 = 0, num2 = 1, res;
@@ -82,6 +83,7 @@ void calcularFibonacci(int num)
      - num: es el numero que ingresa el usuario.
    Valor de retorno: retorna los numeros de de la sucesion.
 */
+
 int calcularFibonacciRecursion(int num)
 {
     if (num <= 1)
@@ -101,6 +103,7 @@ int calcularFibonacciRecursion(int num)
      - n: el numero que contiene i.
    Valor de retorno: i modificada.
 */
+
 int factorial(int n)
 {
     if (n <= 1)
@@ -137,6 +140,7 @@ int Coeficiente(int n, int k)
      - k: recorre el valor para imprimir los numeros.
    Valor de retorno: los numeros y las filas del triangulo.
 */
+
 void generarTrianguloPascal(int num)
 {
     int i, j, k;
