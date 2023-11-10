@@ -20,7 +20,7 @@ int main()
 
     do
     {
-        op = validarNumeros("\nQue actividad desea hacer?\n1. Fibonacci sin recursion\n2. Fibonacci con recursion\n3. Triangulo de Pascal\n4. Salir\n", 1, 4);
+        op = validarnumeros("\nQue actividad desea hacer?\n1. Fibonacci sin recursion\n2. Fibonacci con recursion\n3. Triangulo de Pascal\n4. Salir\n", 1, 4);
         switch (op)
         {
         case 1:

@@ -7,25 +7,24 @@
 #include <locale.h>
 #include <conio.h>
 
-// Función para convertir una cadena en mayúsculas
+// Esta función convierte una cadena en mayúsculas
 char *mayuscula(char cadena[]);
 
-// Función que valida un número en un rango específico
+// Esta función valida un número en un rango específico
 int validarNumeros(char mensaje[], int ri, int rf);
 
-// Función que genera un número aleatorio en un rango específico
+// Esta función genera un número aleatorio en un rango específico
 int random(int ri, int rf);
 
-// Función que valida una cadena de caracteres para que solo contenga letras y espacios
+// Esta función valida una cadena de caracteres para asegurarse de que solo contiene letras y espacios
 char *validarletras(char mensaje[], char cadena[]);
 
-// Función que cuenta la cantidad de caracteres en una cadena
-int contador(char cadena);
+// Esta función cuenta la cantidad de caracteres en una cadena
+int contador(char cadena[]);
 
-// Función que valida que la entrada contenga solo números en un rango específico
+// Esta función valida que la entrada contenga solo números en un rango específico
 int validarnumeros(char mensaje[], int ri, int rf);
 
-// Función para convertir una cadena en mayúsculas
 char *mayuscula(char cadena[])
 {
     int i, x;
@@ -41,7 +40,6 @@ char *mayuscula(char cadena[])
     return cadena;
 }
 
-// Función que valida un número en un rango específico
 int validarNumeros(char mensaje[], int ri, int rf)
 {
     char entrada[100];
@@ -53,13 +51,12 @@ int validarNumeros(char mensaje[], int ri, int rf)
         num = atoi(entrada);
         if (num < ri || num > rf)
         {
-            printf("\nINGRESE EL NÚMERO OTRA VEZ POR FAVOR\n");
+            printf("\nINGRESE EL NUMERO OTRA VEZ POR FAVOR\n");
         }
     } while (num < ri || num > rf);
     return num;
 }
 
-// Función que genera un número aleatorio en un rango específico
 int random(int ri, int rf)
 {
     int r;
@@ -67,7 +64,6 @@ int random(int ri, int rf)
     return (rand() % r) + ri;
 }
 
-// Función que valida una cadena de caracteres para que solo contenga letras y espacios
 char *validarletras(char mensaje[], char cadena[])
 {
     int x, i, salida;
@@ -87,19 +83,19 @@ char *validarletras(char mensaje[], char cadena[])
             letras = (wchar_t)cadena[i];
             if (!iswalpha(letras) && cadena[i] != ' ')
             {
-                printf("CARACTERES INVÁLIDOS\n");
+                printf("CARACTERES INVALIDOS\n");
                 salida = 1;
             }
 
             if (cadena[i] == ' ' && cadena[i + 1] == ' ')
             {
-                printf("CARACTERES INVÁLIDOS\n");
+                printf("CARACTERES INVALIDOS\n");
                 salida = 1;
                 i = x;
             }
             if (cadena[i] >= '0' && cadena[i] <= '9')
             {
-                printf("CARACTERES INVÁLIDOS\n");
+                printf("CARACTERES INVALIDOS\n");
                 salida = 1;
                 i = x;
             }
@@ -114,7 +110,6 @@ char *validarletras(char mensaje[], char cadena[])
     return cadena;
 }
 
-// Función que cuenta la cantidad de caracteres en una cadena
 int contador(char cadena[])
 {
     int i;
@@ -126,7 +121,6 @@ int contador(char cadena[])
     return i;
 }
 
-// Función que valida que la entrada contenga solo números en un rango específico
 int validarnumeros(char mensaje[], int ri, int rf)
 {
     char menu[100];
@@ -153,7 +147,7 @@ int validarnumeros(char mensaje[], int ri, int rf)
         num = atoi(menu);
         if (num < ri || num > rf)
         {
-            printf("INGRESE EL NÚMERO OTRA VEZ POR FAVOR\n");
+            printf("INGRESE EL NUMERO OTRA VEZ POR FAVOR\n");
         }
     } while (num < ri || num > rf || salida == 0);
     return num;
