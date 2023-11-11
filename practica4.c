@@ -39,14 +39,13 @@ int main()
             break;
         case 3:
             num = validarnumeros("Ingrese el numero de filas del Triangulo de Pascal: ", 0, 100000000);
-
             generarTrianguloPascal(num);
             menu = 1;
             break;
         case 4:
             system("cls");
             printf("FIN DEL PROGRAMA");
-            menu = 0;
+
             return 0;
             break;
         }
